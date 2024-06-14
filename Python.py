@@ -1,5 +1,15 @@
+#Initial learning of Class and Object
 class Student:
-    name = "Mandeep Kaur"
+   
+    def __init__ (self, name, marks):
+      self.name = name
+      self.marks = marks
 
-s1 = Student()
-print(s1.name)
+    def get_avg(self):
+      sum = 0
+      for val in self.marks:
+        sum += val
+      print("hi", self.name, "your average is", sum/3)
+
+s1 = Student("Mandeep" , [100,98,45])
+s1.get_avg()
